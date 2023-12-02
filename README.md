@@ -1,2 +1,2 @@
 # Amateurdle
-A really bad wordle clone, because why not?
+A really bad wordle clone, cause why not?
