@@ -11,7 +11,7 @@ body {
 .top-bar {
     border-bottom: solid 1px #3a3a3c;
     height: 70px;
-   // box-shadow: grey 1px 1px;
+    box-shadow: grey 1px 1px;
 }
 
 .top-header {
@@ -21,8 +21,18 @@ body {
     color: white;
 }
 
+.info-box {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.info-content {
+    font-size: 28px;
+    animation: 1s linear infinite spin;
+}
+
 .play-area {
-    margin-top: 50px;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -30,6 +40,14 @@ body {
 
 }
 
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 .board {
     display: grid;
     width: 280px;
@@ -42,8 +60,7 @@ body {
     display: flex;
     flex-direction: row;   
     align-items: center;    
-    justify-content: space-around;
-
+    justify-content: space-around;  
 }
 
 .board-cell {
@@ -68,3 +85,26 @@ body {
 .green-bg {
     background-color: forestgreen;
 }
+
+.modal-container{
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    background-color: white;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.modal-text {
+    margin: 0;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    }
